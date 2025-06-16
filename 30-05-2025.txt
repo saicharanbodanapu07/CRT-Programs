@@ -1,0 +1,114 @@
+public class Movie {
+    String name;
+    float rating;
+    String duration;
+    Movie(String name,float rating,String duration){
+        this.name=name;
+        this.rating=rating;
+        this.duration=duration;
+    }
+    void details(){
+        System.out.println("Movie name:"+name);
+        System.out.println("Movie rating:"+rating);
+        System.out.println("Movie duration:"+duration);
+    
+    if(rating >= 9 ){
+         System.out.println("Movie is hit");
+    }System.out.println("--------------------");
+    }
+    
+    
+    public static void main(String[] args) {
+        Movie m1 =new Movie ("Gangubhai",9.5f,"2h:30min");
+        Movie m2 =new Movie ("ArjunReddy",9.5f,"2h:45min");
+        m1.details();
+        m2.details();
+    }
+}
+-----------------------
+public class Game{
+    int play_count;
+    String title;
+    int rating;
+    String genre;
+
+    public Game(int play_count, String title, int rating, String genre){
+        this.play_count = play_count;
+        this.title = title;
+        this.rating = rating;
+        this.genre = genre;
+    }
+
+    public void play(){
+        play_count++;
+        System.out.println("Playing " + title + ". Play count: " + play_count);
+    }
+
+    public void friendPlay(){
+        if (genre == "Horror") {
+            System.out.println(title + " is not Friendly " + genre);
+        }
+        else {
+            System.out.println(title + " is Friendly " + genre);
+        }
+    }
+
+    public void info(){
+        System.out.println("Title: " + title);
+        System.out.println("Play Count: " + play_count);
+        System.out.println("Rating: " + rating);
+        System.out.println("Genre: " + genre);
+    }
+
+}
+---------------------------------------------------------------
+public class App {
+    
+    String name;
+    String version;
+    String category;
+    int downloads;
+    String[] reviews;
+    String developer;
+
+    public App(String name, String version, String category, int downloads, String reviews, String developer) {
+        this.name = name;
+        this.version = version;
+        this.category = category;
+        this.downloads = downloads;
+        this.reviews = reviews.split(","); 
+        this.developer = developer;
+    }
+    public void info() {
+        System.out.println("App Name: " + name);
+        System.out.println("Version: " + version);
+        System.out.println("Category: " + category);
+        System.out.println("Downloads: " + downloads);
+        System.out.println("Reviews: " + reviews);
+        System.out.println("Developer: " + developer);
+    }
+
+    public void popularity() {
+        if (downloads > 1000000) {
+            System.out.println(name + " is a popular app.");
+        } else {
+            System.out.println(name + " is not a popular app.");
+        }
+    }
+
+    public void reviews(){
+        System.out.println("Reviews for " + name + ":");
+        for (String review : reviews) {
+            System.out.println("- " + review.trim());
+        }
+    }
+
+    public void getSummary() {
+        System.out.println("App Summary:");
+        System.out.println("Name: " + name);
+        System.out.println("Version: " + version);
+        System.out.println("Category: " + category);
+        System.out.println("Downloads: " + downloads);
+        System.out.println("Developer: " + developer);
+    }
+}
