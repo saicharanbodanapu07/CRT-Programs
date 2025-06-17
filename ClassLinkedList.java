@@ -1,4 +1,4 @@
-public class ClassLinkedList {
+public class ClassLinkedList{
     public static void main(String[] args) {
         LinkedList list = new LinkedList();
         list.insertEnd(10);
